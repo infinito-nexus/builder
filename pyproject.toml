@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infinito-builder"
+version = "0.1.0"
+description = "Make your app Infinito.Nexus compatible: turn it into a web-app-cst role"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE.md" }
+authors = [{ name = "Kevin Veen-Birkenbach", email = "kevin@veen.world" }]
+dependencies = ["Jinja2>=3.1", "PyYAML>=6"]
+
+[project.scripts]
+infinito-builder = "infinito_builder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
